@@ -1,93 +1,118 @@
-# # # # # # # # # # # # #
-#   K i k o - p l u s   #
-# # # # # # # # # # # # #
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+#permalink:           pretty
+permalink: /blog/:year/:month/:day/:title/
+relative_permalinks: false
+encoding: utf-8
 
-# Basic
-name:               "Kacha's Blog"
-
-author:
-  facebook:         your-id
-  youtubeUser:      your-id
-  youtubeChannel:   your-id
-  twitter:          a_doodlebug
-  github:           kachaMukabe
-  stackoverflow:    your-id
-  quora:            your-id
-  linkedin:         kachamukabe
-  pinterest:        your-id
-  googlePlus:       your-id
-  instagram:        your-id
-  reddit:           your-id
-  medium:           your-id
-  tumblr:           your-id
-  email:            201401818@ub.ac.bw
-
-copyright:
-  year:             2017
-  name:             Kacha Mukabe
-
-# Google-analytics
-google-analytics:
-  id:               "UA-103646383-1"
-
-# Disqus
-disqus:
-  id:               ""
-
-# URL
-url:                "https://brainDeadCoder.github.io" # the base hostname & protocol for your site
-# url:                "http://localhost:4000" # use this url when you develop
-baseurl:            "" # the subpath of your site, e.g. /blog
-
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:           Africa/Gaborone
-permalink:          /:year-:month-:day/:title/
-
-# Pagination
-paginate:           5
-paginate_path:      /page:num/
-
-# Markdown
-markdown:           kramdown
+# Setup
+title:               Sub Saharan Coder
+#tagline:             'foo's website
+description:         "Kacha's blog..."
+url: https://kachamukabe.me
+baseurl: ""
+urlimg: https://kachamukabe.me/images/
+## If you do not have custom domain, comment top three lines, uncomment three lines below and replace dyndna with your github userid and lanyon-plus with your project name. Also, rename CNAME file to CNAME.sample
+#url: https://dyndna.github.io/lanyon-plus
+#baseurl: "/lanyon-plus"
+#urlimg: https://dyndna.github.io/lanyon-plus/images/
+markdown: kramdown
 kramdown:
-  input:            GFM
+  math_engine: mathjax
 
-# Navigation
-nav:
-  - name:           "About"
-    url:            "/about"
-  - name:           "Archive"
-    url:            "/archive"
-  - name:           "Tags"
-    url:            "/tags"
-  - name:           "Github"
-    url:            "https://github.com/kachaMukabe"
+paginate: 5
+paginate_path: "/blog/page:num"
+excerpt_separator: <!--more-->
+default_bg: sitebg.jpg
+default_logo: sitelogo.png
+safe: false
+timezone:    Africa/Gaborone
+future:      true
 
-# Sass
-sass:
-  sass_dir:         _sass
-  style:            :compressed
 
-# Scopes
-defaults:
-  -
-    scope:
-      path:         ""
-      type:         "pages"
-    values:
-      layout:       "page"
-  -
-    scope:
-      path:         ""
-      type:         "posts"
-    values:
-      layout:       "post"
+## code highlight options
+syntax_highlighter: rouge
+input: GFM
 
-# jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
 gems:
-  - jekyll-seo-tag
-  - jekyll-paginate
-  - jekyll-admin
+  - github-pages
+  - font-awesome-sass
+  - jekyll-redirect-from
+  - jekyll-mentions
 
-exclude:            [vendor]
+jekyll-mentions:
+  base_url: https://twitter.com
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "rakefile", "README.md", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "LICENSE", "vendor", "assets", "_plugins", "public/dormant"]
+
+# About/contact
+author:
+  name:              Kacha Mukabe
+  url:               https://twitter.com/a_doodlebug
+  avatar:         foo.png
+  #email:           
+
+# Owner/author information
+owner:
+  name:           Kacha Mukabe
+  avatar:         foo.png
+  #email:          
+  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
+  description:
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        a_doodlebug
+  facebook:       
+  github:         kachaMukabe
+  stackexchange:  
+  linkedin:       https://www.linkedin.com/in/kachamukabe
+  instagram:      
+  flickr:
+  tumblr:  
+  google_plus:    https://plus.google.com/+foo
+  # orcid and google scholar IDs are different than standard username.
+  orcid: xyz123abc
+  gscholar: xyz123abc
+
+## sidebar links:
+# For external links add external: true
+links:
+  - title: <i class="iconside iconm-home"></i> Home
+    url: /
+  - title: <i class="iconside iconm-user"></i> About
+    url: /about/
+  - title: <i class="iconside iconm-quill"></i> Blog
+    url: /blog/
+  - title: <i class="fa fa-tags"></i> Tags
+    url: /tags/
+  - title: <i class="fa fa-archive"></i> Archive
+    url: /archive/
+  - title: <i class="iconside iconm-wordpress"></i> Old Blog
+    url: https://foo.wordpress.com
+    external: true
+  - title: <i class="iconside iconm-envelop"></i> Contact
+    url: /contact/
+  - title: <i class="iconside iconm-twitter"></i> Twitter
+    url: https://twitter.com/abcd
+    external: true
+  - title: <i class="iconside iconm-feed2"></i> Feed
+    url: /feed.xml
+
+# Google Custom Search:
+#google_search: xyz123abc
+
+# Twitter stream widget:
+# Replace xyz123abc with your twitter widget id from https://twitter.com/settings/widgets
+#twitter_widget_id: xyz123abc
+
+# Add disqus username for Disqus comment board:
+disqus_shortname: foo
+
+# Analytics and webmaster tools stuff goes here
+#google_analytics:   xyz123abc
+
+#### For dummy website only - remove if you wish ####
+#github_repo: https://github.com/dyndna/lanyon-plus
+version: 1.1.1
+## END ##
