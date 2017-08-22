@@ -11,6 +11,6 @@ author_url: http://twitter.com/a_doodlebug
 # tech
 markdown: kramdown
 
-gems:
+plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
