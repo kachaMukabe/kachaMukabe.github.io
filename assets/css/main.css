@@ -25,6 +25,7 @@ h1{
 
 h1 a {
   text-decoration: none;
+  color: #07baff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,7 +39,7 @@ a {
 }
 
 a:hover {
-  color: black;
+  color: #00aced;
   border-bottom: none;
 }
 
@@ -103,13 +104,13 @@ blockquote p {
 }
 
 .masthead a:hover {
-  color:black;
+  color:#FF55FF;
 }
 
 .masthead-title a {
   font-size: 2rem;
   text-decoration: none;
-  color: #505050;
+  color: #AA00AA;
 }
 
 .masthead-subtitle {
@@ -240,7 +241,7 @@ blockquote p {
 }
 
 .menu-content a {
-  color: #999;
+  color: #AA00AA;
   font-size: 1rem;
   padding-right: 10px;
 }
