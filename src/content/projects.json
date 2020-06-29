@@ -1,0 +1,9 @@
+{
+    "projects": [
+        {
+            "title": "Portfolio",
+            "description": "This site that you are on, built in gatsby js",
+            "url": "https://kachamukabe.com"
+        }
+    ]
+}
