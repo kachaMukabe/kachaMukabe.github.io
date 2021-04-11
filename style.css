@@ -1,0 +1,34 @@
+@font-face {
+    font-family: roboto;
+    src: url(roboto_regular.ttf);
+    font-display: fallback;
+}
+
+body {
+    margin: 40px auto;
+    max-width: 650px;
+    line-height: 1.6;
+    font-size: 18px;
+    font-family: roboto;
+    color: #444;
+    background-color: #EEEEEE;
+    padding: 0 10px;
+}
+
+h1, h2, h3{
+    line-height: 1.2;
+}
+
+a{
+    text-decoration: none;
+    color: #444;
+}
+
+a span {
+	color:#8e8e8e 
+}
+
+a:hover, a:hover span {
+    color: #5badf0;
+}
+
