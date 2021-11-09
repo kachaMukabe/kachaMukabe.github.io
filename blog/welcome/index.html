@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The blog of Kacha Mukabe">
   <!-- Grab title from the page data and dump it here -->
-  <title>Kacha Mukabe</title>
+  <title>Welcome</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body class="post">
@@ -39,14 +39,23 @@
 		</nav>
 		
 <div class="pad2y limiter content">
-	<div class="writing nu">
-		
-		<div>
-		<a href="/blog/welcome/" title="1">Welcome</a>
-		</div>
-		<time datetime="2021-10-31T00:00:00.000Z">2021-10-31</time>
-		
-	</div>
+<h1>Welcome</h1>
+
+<div class="body">
+<p>This is a test now</p>
+
+</div>
+
+<div class="breaker"></div>
+
+<div class="pad2y">
+<p>
+	<time datetime="2021-10-31T00:00:00.000Z">2021-10-31</time>	
+	&nbsp;
+	<a href="" rel="nofollow" target="_blank" title="Follow me on Twitter">@kMukabe</a>
+</p>
+</div>
+
 </div>
 
 
@@ -54,7 +63,7 @@
   <!-- Grab the content from the page data, dump it here, and mark it as safe -->
   <!-- Safe docs: https://mozilla.github.io/nunjucks/templating.html#safe -->
 		  <script>
-			  let url = "/".split("/")[1];
+			  let url = "/blog/welcome/".split("/")[1];
 			  let id = url === 'blog'? 'posts': url === ''? 'posts': url;
 			  let a = document.getElementById(id)
 			  a.style.visibility = 'visible';
