@@ -1,0 +1,75 @@
+---
+const jobs = [
+  {
+    title: "Applications Developer",
+    company: "Access Bank",
+    timeRange: "2022-Present",
+    description:
+      "As an Applications Developer Team Lead, I manage a team to deliver banking applications and features using diverse technologies, achieve faster project completion with Agile, streamline deployments, and facilitate cross-functional collaboration for business-to-technical translations.",
+  },
+  {
+    title: "Fullstack Developer",
+    company: "Thebe Investment Management",
+    timeRange: "2020-2022",
+    description:
+      "As a Full Stack Developer, I led the creation of an engaging online education platform for 500+ users, managed successful CI/CD deployments on AWS with high uptime, and ensured timely project completion through effective scheduling and milestone management.",
+  },
+  {
+    title: "Software Developer",
+    company: "Access Bank",
+    timeRange: "2019-2020",
+    description:
+      "At Access Bank Zambia, as a Software Developer, I enhanced Visa Card Management on .NET, drastically cutting issuance time, collaborated with vendors for system integrations improving customer services, and automated processes to significantly boost efficiency.",
+  },
+];
+---
+
+<section
+  aria-labelledby=":rr:"
+  class="mx-auto max-w-5xl sm:px-6 sm:border-l sm:border-primary-700/40"
+>
+  <div class="grid grid-cols-1 gap-y-8 items-baseline md:grid-cols-4">
+    <h2
+      id=":rr:"
+      class="text-lg font-semibold tracking-tight sm:text-xl text-primary-100"
+    >
+      Experience
+    </h2>
+    <div class="md:col-span-3">
+      <ul role="list" class="space-y-16">
+        {
+          jobs.map((j) => (
+            <li class="flex flex-col items-start">
+              <>
+                <div class="flex flex-row justify-between items-baseline pl-2 w-full border-l border-primary-700">
+                  <div class="flex flex-col">
+                    <div class="flex flex-row gap-2 items-center">
+                      <img
+                        decoding="async"
+                        loading="lazy"
+                        src={`images/${j.company.toLowerCase()}.png`}
+                        class="w-5 h-5 rounded-full ring-1 shadow-md shadow-primary-800/5 ring-primary-900"
+                      />
+                      <h3 class="text-base font-semibold tracking-tight sm:max-w-none sm:text-lg max-w-[20ch] text-primary-100">
+                        {j.company}
+                      </h3>
+                    </div>
+
+                    <h2 class="text-sm tracking-tight sm:max-w-none sm:text-base max-w-[20ch] text-primary-300">
+                      {j.title}
+                    </h2>
+                  </div>
+                  <time class="text-sm text-primary-600">{j.timeRange}</time>
+                </div>
+
+                <p class="z-10 mt-4 text-sm text-primary-300 max-w-[75ch]">
+                  {j.description}
+                </p>
+              </>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>

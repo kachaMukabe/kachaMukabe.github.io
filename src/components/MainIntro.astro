@@ -1,0 +1,32 @@
+---
+import SocialMediaIcons from "@components/SocialMediaIcons.astro";
+import HighlightedLink from "./HighlightedLink.astro";
+---
+
+<div class="flex flex-col gap-8 items-center mx-auto mt-24">
+  <div class="flex flex-col gap-2 items-center mx-auto">
+    <img
+      decoding="async"
+      loading="lazy"
+      class="w-20 h-20 rounded-full shadow-sm sm:w-28 sm:h-28 shadow-white aspect-[1/1]"
+      src="/images/Profile.jpeg"
+      alt="Small avatar of myself"
+    />
+    <SocialMediaIcons
+      class="w-8 h-8 stroke-1 hover:cursor-pointer stroke-primary-300 hover:stroke-accent-400"
+    />
+  </div>
+  <div class="flex flex-col gap-4 mb-2 max-w-[75ch]">
+    <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl">
+      Developer and hackathon addict
+    </h1>
+    <p class="text-primary-300">
+      I am Kacha, a backend developer and tools maker. I am the creator
+      of <HighlightedLink
+        href="https://devpost.com/software/podcon"
+        >Podcon</HighlightedLink
+      >, a small project that adds conversational AI analysis to your favourite podcast episodes. 
+      
+    </p>
+  </div>
+</div>

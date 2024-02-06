@@ -1,0 +1,35 @@
+---
+import ProjectsGrid from "@components/ProjectsGrid.astro";
+import Layout from "@layout/Layout.astro";
+
+const projects = [
+  {
+    name: "Podcon",
+    description:
+      "A conversaional AI analysis for your favourite podcast.",
+    link: "https://devpost.com/software/podcon",
+  }
+];
+---
+
+<Layout
+  pageTitle="Projects"
+  description="Things I’ve created to make my life a little easier and just to indulge myself"
+  type="content"
+>
+  <main class="px-8 pt-16 mx-auto max-w-6xl sm:pt-24 lg:px-16">
+    <div class="flex flex-col mt-4 space-y-8">
+      <div class="flex flex-col space-y-4">
+        <h1
+          class="text-4xl font-bold tracking-tighter sm:text-5xl max-w-[25ch]"
+        >
+          Tiny tools I have developed.
+        </h1>
+        <p class="text-primary-300 max-w-[65ch]">
+	   These are some of the projects I have worked on over the years. Click on anything you're interested in to see the code.
+        </p>
+      </div>
+      <ProjectsGrid projects={projects} />
+    </div>
+  </main>
+</Layout>
